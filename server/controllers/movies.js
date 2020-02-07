@@ -3,6 +3,14 @@ const router = express.Router();
 
 const { Movies } = require('../models/movies.js');
 
+
+
+router.get('/',(request, response) => {
+    response.send('Hola endpoint /');
+})
+
+
+
 router.get('/saludo',(request, response) => {
     response.send('Hola');
 })
@@ -25,7 +33,7 @@ router.patch('/update/:id', (req, res) => {
 
 
 
-router.get('(/read/:id', (req, res) => {
+router.get('/read/:id', (req, res) => {
     const { id } = req.params;
 
     Movies
